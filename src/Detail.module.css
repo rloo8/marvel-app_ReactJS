@@ -1,0 +1,44 @@
+.container {
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  color: #fff;
+}
+
+.header {
+  height: 90px;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+.header img {
+  height: 100%;
+  display: block;
+  margin: auto;
+}
+
+section.loading {
+  height: 100vh;
+}
+
+.loading h1 {
+  padding: 100px;
+}
+
+section.character {
+  width: 70vw;
+}
+
+button {
+  background-color: #ed181e;
+  border: none;
+  padding: 10px 30px;
+}
+button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
