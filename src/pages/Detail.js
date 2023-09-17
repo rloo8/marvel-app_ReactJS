@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import CharacterDetail from "../component/CharacterDetail";
+import Header from "../component/Header";
 import styles from "./Detail.module.css";
 
 function Detail() {
@@ -18,7 +19,7 @@ function Detail() {
         setDetail(json.data.results);
         setLoading(false);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div className={styles.container}>

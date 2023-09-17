@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Character from "../component/Character";
+import Header from "../component/Header";
 import styles from "./Home.module.css";
 
 function Home() {

@@ -1,10 +1,10 @@
 import styles from "./CharacterDetail.module.css";
 
-function Character({ name, description, imgPath, comics, series }) {
+function CharacterDetail({ name, description, imgPath, comics, series }) {
   return (
     <div className={styles.character}>
       <h1>{name}</h1>
-      <img src={imgPath} alt={name}/>
+      <img src={imgPath} alt={name} />
       <span>{description}</span>
 
       <div className={styles.category}>

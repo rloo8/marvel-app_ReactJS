@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Character.module.css";
 
-function Characters({ id, name, imgPath}) {
+function Character({ id, name, imgPath }) {
   return (
     <Link to={`/detail/${id}`}>
       <div className={styles.imgBox}>
