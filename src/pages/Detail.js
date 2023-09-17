@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Character from "./component/Character";
+import CharacterDetail from "../component/CharacterDetail";
 import styles from "./Detail.module.css";
 
 function Detail() {
@@ -22,9 +22,7 @@ function Detail() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/1200px-Marvel_Logo.svg.png" />
-      </header>
+      <Header />
 
       {loading ? (
         <section className={styles.loading}>
@@ -33,12 +31,11 @@ function Detail() {
       ) : (
         <section className={styles.character}>
           {detail.map((char) => (
-            <Character
+            <CharacterDetail
               key={char.id}
               name={char.name}
               description={char.description}
-              img={char.thumbnail.path}
-              extension={char.thumbnail.extension}
+              imgPath={`${char.thumbnail.path}.${char.thumbnail.extension}`}
               comics={char.comics}
               series={char.series}
             />

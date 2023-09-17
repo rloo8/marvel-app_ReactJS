@@ -8,17 +8,6 @@
   color: #fff;
 }
 
-.header {
-  height: 90px;
-  width: 100%;
-  border-bottom: 2px solid #fff;
-}
-.header img {
-  height: 100%;
-  display: block;
-  margin: auto;
-}
-
 section.loading {
   height: 100vh;
 }

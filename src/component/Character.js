@@ -1,31 +1,14 @@
+import { Link } from "react-router-dom";
 import styles from "./Character.module.css";
 
-function Character({ name, description, img, extension, comics, series }) {
+function Characters({ id, name, imgPath}) {
   return (
-    <div className={styles.character}>
-      <h1>{name}</h1>
-      <img src={`${img}.${extension}`} />
-      <span>{description}</span>
-
-      <div className={styles.category}>
-        <div>
-          <h3>COMICS</h3>
-          <ul>
-            {comics.items.map((item) => (
-              <li key={item.name}>{item.name}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h3>SERIES</h3>
-          <ul>
-            {series.items.map((item) => (
-              <li key={item.name}>{item.name}</li>
-            ))}
-          </ul>
-        </div>
+    <Link to={`/detail/${id}`}>
+      <div className={styles.imgBox}>
+        <img src={imgPath} alt={name} />
       </div>
-    </div>
+      <h2>{name}</h2>
+    </Link>
   );
 }
 

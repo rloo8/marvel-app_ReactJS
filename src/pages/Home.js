@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Character from "./component/Characters";
+import Character from "../component/Character";
 import styles from "./Home.module.css";
 
 function Home() {
@@ -19,9 +19,7 @@ function Home() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/1200px-Marvel_Logo.svg.png" />
-      </header>
+      <Header />
 
       {loading ? (
         <section className={styles.loading}>
@@ -34,8 +32,7 @@ function Home() {
               key={char.id}
               id={char.id}
               name={char.name}
-              img={char.thumbnail.path}
-              extension={char.thumbnail.extension}
+              imgPath={`${char.thumbnail.path}.${char.thumbnail.extension}`}
             />
           ))}
         </section>
